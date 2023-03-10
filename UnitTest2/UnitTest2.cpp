@@ -57,6 +57,7 @@ namespace UnitTest2
 		void setWidth(int input, int* width) {
 			if (input >= 1 && input <= 99) {
 				*width = input;
+
 			}
 		}
 	};
