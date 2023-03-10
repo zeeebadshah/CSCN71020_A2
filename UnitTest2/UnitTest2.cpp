@@ -27,8 +27,8 @@ namespace UnitTest2
 		TEST_METHOD(LengthSetterInvalidNegative)
 		{
 			int length = 0;
-			setLength(-60, &length);
-			Assert::AreEqual(-60, length);
+			setLength(-98, &length);
+			Assert::AreEqual(-98, length);
 		}
 			
 		void setLength(int input, int* length) {
@@ -36,17 +36,18 @@ namespace UnitTest2
 					*length = input;
 				}
 			}
-		TEST_METHOD(WidthSetterInvalid100)
-		{
-			int width = 0;
-			setWidth(100, &width);
-			Assert::AreEqual(100, width);
-		}
+		
 		TEST_METHOD(WidthSetterInvalid99)
 		{
 			int width = 0;
 			setWidth(99, &width);
 			Assert::AreEqual(99, width);
+		}
+		TEST_METHOD(WidthSetterInvalid100)
+		{
+			int width = 0;
+			setWidth(100, &width);
+			Assert::AreEqual(87, width);
 		}
 		TEST_METHOD(WidthSetterInvalidNegative)
 		{
